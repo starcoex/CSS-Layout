@@ -1,0 +1,55 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(3, 200px);
+  gap: 10px;
+  grid-template-areas:
+    'header header header'
+    'bad bad bad-next'
+    'religion religion religion';
+}
+.header {
+  grid-area: header;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0 20px 20px 20px;
+}
+.header ul:nth-child(2) {
+  align-self: 1;
+}
+.bad {
+  grid-area: bad;
+  background-color: tomato;
+  display: flex;
+  align-items: flex-end;
+}
+.bad p {
+  font-size: 150px;
+  font-weight: 600;
+}
+.bad-next {
+  grid-area: bad-next;
+  background-color: tomato;
+}
+.religion {
+  grid-area: religion;
+  background-color: tomato;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header ul li {
+  color: white;
+}
+.religion p:first-child {
+  font-size: 100px;
+  font-weight: 600;
+}
+.religion p:nth-child(2),
+.religion p:last-child {
+  font-size: 30px;
+  color: white;
+}
