@@ -1,27 +1,46 @@
 .grid {
   display: grid;
+  height: 80vh;
   /* grid-template-columns: 200px 200px 200px 200px; */
-  grid-template-columns: repeat(4, 200px);
+  /* grid-template-columns: repeat(4, 1fr); */
   /* grid-template-rows: 300px 300px 300px 300px; */
-  grid-template-rows: repeat(4, 200px);
+  /* grid-template-rows: repeat(4, 1fr); */
   /* grid-template-areas:
     'header header header header'
     'content content content nav'
     'content content content nav'
     'footer footer footer footer'; */
-  gap: 10px;
+  gap: 5px;
+  /* grid-template:
+    'header header header header' 1fr
+    'content content content nav' 2fr
+    'footer footer footer footer' 1fr / 1fr 1fr 1fr 1fr; */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  /* justify-items: start; */
+  align-items: end;
 }
+
 .header {
   background-color: tomato;
-  grid-column-start: 1;
-  grid-column-end: 5;
+  /* grid-column-start: 1;
+  grid-column-end: 5; */
+  /* grid-column: 1 / 5; */
+  /* grid-column: 1 / -1; */
+  /* grid-column:  span 4; */
   /* grid-area: header; */
 }
 .content {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  /* grid-column-start: 1;
+  grid-column-end: 4; */
+  /* grid-column: 1 / 4; */
+  /* grid-column: 1 / -2; */
+  /* grid-column: span 3; */
+  /* grid-row-start: 2;
+  grid-row-end: 4; */
+  /* grid-row: 2 / 4; */
+  /* grid-row: 2 / -2; */
+  /* grid-row: 2 / span 2; */
   background-color: thistle;
   /* grid-area: content; */
 }
@@ -29,17 +48,20 @@
   /* grid-column-start: 1;
   grid-column-end: 5; */
   background-color: violet;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  /* grid-row-start: 2;
+  grid-row-end: 4; */
+  /* grid-row: 2 / 4; */
+  /* grid-row: 2 / -2; */
+  /* grid-row: 2 / span 2; */
 
   /* grid-area: nav; */
 }
 .footer {
-  grid-column-start: 1;
-  grid-column-end: 5;
+  /* grid-column-start: 1;
+  grid-column-end: 5; */
+  /* grid-column: 1 / 5; */
+  /* grid-column: 1 / -1; */
+  /* grid-column: span 4; */
   background-color: rgb(43, 30, 43);
   /* grid-area: footer; */
-}
-body{
-  col
 }

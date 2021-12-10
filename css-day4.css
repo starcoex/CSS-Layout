@@ -1,0 +1,73 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+
+body {
+  background-color: #DDE1D4​;
+  padding: 15px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.grid {
+  height: 100%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.column {
+  /* display: flex; */
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 600;
+  /* transition-property: transform box-shadow;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out; */
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.column:hover {
+  /* transform: translate(-5px, -10px); */
+  transform: rotateY(360deg) translate(-5px, -10px);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.column:nth-child(1) {
+  grid-area: 1 / 1 / span 2 / span 2;
+  background-color: #dae7de​;
+  color: #f44607​;
+  font-size: 50px;
+}
+.column:nth-child(2) {
+  grid-area: 1 / 3 / span 2 / span 2;
+  background-color: #008A69​;
+  color: white;
+  font-size: 50px;
+}
+.column:nth-child(3) {
+  grid-area: 3 / 1 / span 2 / span 2;
+  background-color: #f44607​;
+  color: white;
+  font-size: 50px;
+}
+.column:nth-child(4) {
+  background-color: #F7ABC5​;
+  color: #f44607​;
+}
+.column:nth-child(5) {
+  background-color: #5F5FA9​;
+  color: white;
+}
+.column:nth-child(6) {
+  background-color: #FFC128​;
+  color: #f44607​;
+}
+.column:nth-child(7) {
+  background-color: #F97374​;
+  color: white;
+}
